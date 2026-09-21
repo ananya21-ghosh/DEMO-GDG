@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model Event {
+  id                   String         @id @default(uuid())
+  slug                 String         @unique
+  title                String
+  theme                String?
+  speaker              String
+  designation          String
+  date                 String
+  time                 String
+  venue                String         @default("FIEM Campus")
+  description          String
+  posterUrl            String
+  venueImageUrl        String?
+  capacity             Int            @default(200)
+  isPublished          Boolean        @default(true)
+  isFeatured           Boolean        @default(false)
+  registrationDeadline String?
+  createdAt            DateTime       @default(now())
+  updatedAt            DateTime       @updatedAt
+  registrations        Registration[]
+}
+
+model Registration {
+  id             String     @id @default(uuid())
+  registrationId String     @unique
+  eventId        String
+  event          Event      @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  fullName       String
+  email          String
+  college        String
+  department     String
+  yearOfStudy    String
+  phone          String?
+  qrCodeUrl      String?
+  isCheckedIn    Boolean    @default(false)
+  checkedInAt    DateTime?
+  createdAt      DateTime   @default(now())
+  emailLogs      EmailLog[]
+
+  @@unique([eventId, email])
+}
+
+model EmailLog {
+  id             String       @id @default(uuid())
+  registrationId String
+  registration   Registration @relation(fields: [registrationId], references: [registrationId], onDelete: Cascade)
+  recipient      String
+  sender         String       @default("21ananyaghosh21@gmail.com")
+  subject        String
+  status         String       // PENDING, SENT, FAILED
+  errorMessage   String?
+  sentAt         DateTime?
+  createdAt      DateTime     @default(now())
+}
