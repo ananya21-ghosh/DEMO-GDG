@@ -7,8 +7,8 @@ import { ShieldCheck, Mail, Lock, Loader2, ArrowRight } from 'lucide-react'
 
 export default function AdminLoginPage() {
   const router = useRouter()
-  const [email, setEmail] = useState('admin@gdgfiem.com')
-  const [password, setPassword] = useState('admin123_fiem')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -80,6 +80,7 @@ export default function AdminLoginPage() {
               <input
                 type="email"
                 required
+                placeholder="admin@gdgfiem.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-google-border bg-white text-sm font-medium text-google-charcoal focus:outline-none focus:ring-2 focus:ring-google-blue"
@@ -96,17 +97,12 @@ export default function AdminLoginPage() {
               <input
                 type="password"
                 required
+                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-google-border bg-white text-sm font-medium text-google-charcoal focus:outline-none focus:ring-2 focus:ring-google-blue"
               />
             </div>
-          </div>
-
-          <div className="bg-google-gray-light p-3 rounded-xl border border-google-border text-[11px] text-google-gray space-y-0.5">
-            <span className="font-bold text-google-charcoal">Default Admin Credentials:</span>
-            <div>Email: <code className="text-google-blue font-mono">admin@gdgfiem.com</code></div>
-            <div>Password: <code className="text-google-blue font-mono">admin123_fiem</code></div>
           </div>
 
           <button
