@@ -69,11 +69,16 @@ export default async function EventDetailsPage({ params }: EventDetailsProps) {
             </div>
           </div>
 
-          {/* FIEM Campus Venue Card */}
-          <div className="bg-white p-6 rounded-3xl border border-google-border shadow-google-card space-y-4">
-            <div className="flex items-center gap-2 text-sm font-bold text-google-charcoal">
-              <MapPin className="w-4 h-4 text-google-yellow" />
-              Event Venue Location
+          {/* FIEM Campus Venue Card with Red Pin Highlight */}
+          <div className="bg-white p-6 rounded-3xl border-2 border-google-red/40 shadow-google-card space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-sm font-extrabold text-google-charcoal">
+                <MapPin className="w-4 h-4 text-google-red fill-google-red animate-bounce" />
+                <span>Marked Venue (Red Pin)</span>
+              </div>
+              <span className="px-2.5 py-1 rounded-full bg-google-red text-white text-[10px] font-bold uppercase tracking-wider">
+                FIEM Sonarpur
+              </span>
             </div>
 
             <div className="relative h-44 rounded-2xl overflow-hidden border border-google-border">
@@ -83,6 +88,10 @@ export default async function EventDetailsPage({ params }: EventDetailsProps) {
                 fill
                 className="object-cover"
               />
+              <div className="absolute top-3 left-3 bg-google-red text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5" />
+                <span>📍 FIEM Campus Main Building</span>
+              </div>
             </div>
 
             <div className="text-xs text-google-gray space-y-1">
@@ -91,6 +100,7 @@ export default async function EventDetailsPage({ params }: EventDetailsProps) {
               <div>Sonarpur Station Road, Bara Fartabad, Kolkata, WB 700150</div>
             </div>
           </div>
+
 
         </div>
 

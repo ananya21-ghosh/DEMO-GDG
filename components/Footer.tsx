@@ -9,18 +9,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         
         {/* FIEM Sonarpur Location Map Section */}
-        <div id="location-map" className="bg-google-gray-light/60 p-6 sm:p-8 rounded-3xl border border-google-border space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-google-border pb-4">
+        <div id="location-map" className="bg-google-red-light/20 p-6 sm:p-8 rounded-3xl border-2 border-google-red/40 space-y-6 shadow-md">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-google-red/20 pb-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-google-red-light text-google-red text-xs font-bold uppercase tracking-wider mb-2">
-                <MapPin className="w-3.5 h-3.5" />
-                Campus Venue Location
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-google-red text-white text-xs font-extrabold uppercase tracking-wider mb-2 shadow-sm animate-pulse">
+                <MapPin className="w-4 h-4 fill-white" />
+                <span>Marked Venue Location (Red Pin)</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-google-charcoal">
+              <h3 className="text-xl sm:text-2xl font-black text-google-charcoal flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-google-red inline-block" />
                 Future Institute of Engineering & Management (FIEM)
               </h3>
-              <p className="text-xs sm:text-sm text-google-gray mt-1">
-                Sonarpur Station Road, Bara Fartabad, Rajpur Sonarpur, Kolkata, West Bengal 700150 (5 mins from Sonarpur Station)
+              <p className="text-xs sm:text-sm text-google-gray font-medium mt-1">
+                📍 Sonarpur Station Road, Bara Fartabad, Rajpur Sonarpur, Kolkata, West Bengal 700150 (5 mins from Sonarpur Railway Station)
               </p>
             </div>
 
@@ -28,16 +29,22 @@ export default function Footer() {
               href="https://maps.google.com/?q=Future+Institute+of+Engineering+and+Management+Sonarpur"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-google-blue hover:bg-google-blue-dark text-white text-xs font-bold shadow-md transition-all self-start md:self-auto shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-google-red hover:bg-google-red-dark text-white text-xs font-bold shadow-lg hover:shadow-xl transition-all self-start md:self-auto shrink-0"
             >
               <Navigation className="w-4 h-4" />
-              <span>Get Live Directions</span>
+              <span>Get Red Pin Directions</span>
               <ExternalLink className="w-3.5 h-3.5 opacity-80" />
             </a>
           </div>
 
-          {/* Interactive Google Map Embed */}
-          <div className="relative w-full h-80 rounded-2xl overflow-hidden border border-google-border shadow-md">
+          {/* Interactive Google Map Embed with Red Marker Overlay Badge */}
+          <div className="relative w-full h-96 rounded-2xl overflow-hidden border-2 border-google-red/40 shadow-lg">
+            {/* Red Location Floating Badge Overlay */}
+            <div className="absolute top-4 left-4 z-10 bg-google-red text-white px-4 py-2 rounded-xl text-xs font-extrabold shadow-xl border border-white/40 flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-white animate-bounce" />
+              <span>📍 FIEM Campus Sonarpur — Marked Location</span>
+            </div>
+
             <iframe
               title="FIEM Sonarpur Campus Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.7265897825224!2d88.41164997592965!3d22.476901836486047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02722b050d249f%3A0xb35a3fa1e389e173!2sFuture%20Institute%20of%20Engineering%20and%20Management%20(FIEM)!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin"
@@ -51,6 +58,7 @@ export default function Footer() {
             />
           </div>
         </div>
+
 
         {/* Footer Navigation & Brand Row */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-google-border pb-10">
