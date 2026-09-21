@@ -9,6 +9,7 @@ const registerSchema = z.object({
   eventId: z.string().min(1, 'Event ID is required'),
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
   email: z.string().email('Invalid email address format'),
+  rsvpStatus: z.string().optional(),
   college: z.string().min(2, 'College/Institution is required'),
   department: z.string().min(1, 'Department/Branch is required'),
   yearOfStudy: z.string().min(1, 'Year of study is required'),

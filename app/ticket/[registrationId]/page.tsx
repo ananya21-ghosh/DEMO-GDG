@@ -215,10 +215,15 @@ export default async function TicketPage({ params }: TicketPageProps) {
               </div>
 
               <div>
-                <div className="text-[10px] uppercase font-bold text-google-gray tracking-wider mb-1">Registration Status</div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-google-green-light border border-google-green/30 text-google-green text-xs font-bold">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  Confirmed
+                <div className="text-[10px] uppercase font-bold text-google-gray tracking-wider mb-1">Registration & RSVP Status</div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-google-green-light border border-google-green/30 text-google-green text-xs font-bold">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    Confirmed
+                  </div>
+                  <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-google-blue-light text-google-blue text-[11px] font-semibold">
+                    RSVP: In-Person Pass
+                  </div>
                 </div>
               </div>
             </div>

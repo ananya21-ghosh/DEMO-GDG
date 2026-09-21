@@ -42,17 +42,26 @@ export default async function HomePage() {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
                 <Link
                   href="/events"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-google-blue hover:bg-google-blue-dark text-white font-semibold shadow-md hover:shadow-google-hover transition-all duration-200 flex items-center justify-center gap-2 group"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-google-blue hover:bg-google-blue-dark text-white font-semibold shadow-md hover:shadow-google-hover transition-all duration-200 flex items-center justify-center gap-2 group"
                 >
                   Explore Events
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
+                
+                <Link
+                  href={featuredEvent ? `/events/${featuredEvent.id}` : "/events"}
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-google-green hover:bg-google-green-dark text-white font-bold shadow-md hover:shadow-google-hover transition-all duration-200 flex items-center justify-center gap-2 animate-pulse hover:animate-none"
+                >
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>RSVP Event Pass</span>
+                </Link>
+
                 <Link
                   href="#join"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white border border-google-border hover:border-google-blue text-google-charcoal hover:text-google-blue font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white border border-google-border hover:border-google-blue text-google-charcoal hover:text-google-blue font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-sm"
                 >
                   Join Our Community
                 </Link>

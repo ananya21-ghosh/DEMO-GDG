@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <Link
               href="/"
               className="text-[15px] font-semibold text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
@@ -56,6 +56,13 @@ export default function Navbar() {
             >
               <Calendar className="w-4 h-4 text-google-blue" />
               Events
+            </Link>
+            <Link
+              href="/events"
+              className="text-xs font-bold text-google-green bg-google-green-light border border-google-green/30 px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5 hover:bg-google-green hover:text-white"
+            >
+              <span className="w-2 h-2 rounded-full bg-google-green animate-pulse" />
+              RSVP Pass
             </Link>
             <Link
               href="/#about"
