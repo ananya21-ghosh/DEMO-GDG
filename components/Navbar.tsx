@@ -11,12 +11,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-google-border shadow-sm transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           
-          {/* Brand Logos */}
-          <div className="flex items-center space-x-3 sm:space-x-5">
+          {/* Brand Logos - Larger & Highly Visible */}
+          <div className="flex items-center space-x-4 sm:space-x-6">
             <Link href="/" className="flex items-center group">
-              <div className="relative h-11 w-44 sm:w-52 transition-transform duration-200 group-hover:scale-[1.02]">
+              <div className="relative h-13 sm:h-16 w-56 sm:w-72 transition-transform duration-200 group-hover:scale-[1.02]">
                 <Image
                   src="/images/gdg-logo.jpeg"
                   alt="Google Developer Group - Future Institute of Engineering & Management"
@@ -27,10 +27,10 @@ export default function Navbar() {
               </div>
             </Link>
 
-            <div className="h-8 w-[1px] bg-google-border hidden sm:block" />
+            <div className="h-10 w-[1.5px] bg-google-border hidden sm:block" />
 
             <Link href="/" className="flex items-center group hidden sm:block">
-              <div className="relative h-10 w-32 transition-transform duration-200 group-hover:scale-[1.02]">
+              <div className="relative h-12 sm:h-14 w-40 sm:w-48 transition-transform duration-200 group-hover:scale-[1.02]">
                 <Image
                   src="/images/fiem-logo.jpeg"
                   alt="Future Institute of Engineering and Management Logo"
@@ -46,27 +46,27 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-[15px] font-medium text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
+              className="text-[15px] font-semibold text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
             >
               Home
             </Link>
             <Link
               href="/events"
-              className="text-[15px] font-medium text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
+              className="text-[15px] font-semibold text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
             >
               <Calendar className="w-4 h-4 text-google-blue" />
               Events
             </Link>
             <Link
               href="/#about"
-              className="text-[15px] font-medium text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
+              className="text-[15px] font-semibold text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
             >
               <Users className="w-4 h-4 text-google-green" />
               About Community
             </Link>
             <Link
               href="/#join"
-              className="text-[15px] font-medium text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
+              className="text-[15px] font-semibold text-google-charcoal hover:text-google-blue transition-colors duration-150 flex items-center gap-1.5"
             >
               <HeartHandshake className="w-4 h-4 text-google-red" />
               Join Community
@@ -74,9 +74,9 @@ export default function Navbar() {
 
             <Link
               href="/admin/login"
-              className="text-xs font-semibold text-google-gray hover:text-google-charcoal bg-google-gray-light border border-google-border px-3 py-1.5 rounded-full transition-all flex items-center gap-1"
+              className="text-xs font-bold text-google-gray hover:text-google-charcoal bg-google-gray-light border border-google-border px-3.5 py-2 rounded-full transition-all flex items-center gap-1.5 shadow-xs"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-google-blue" />
+              <ShieldCheck className="w-4 h-4 text-google-blue" />
               Organizer Auth
             </Link>
           </nav>

@@ -79,10 +79,10 @@ export default async function HomePage() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-md bg-white p-6 rounded-2xl border border-google-border shadow-google-hover space-y-6">
                 <div className="flex justify-between items-center border-b border-google-border pb-4">
-                  <div className="relative h-9 w-40">
+                  <div className="relative h-12 w-52">
                     <Image src="/images/gdg-logo.jpeg" alt="GDG Logo" fill className="object-contain" />
                   </div>
-                  <div className="relative h-8 w-24">
+                  <div className="relative h-10 w-36">
                     <Image src="/images/fiem-logo.jpeg" alt="FIEM Logo" fill className="object-contain" />
                   </div>
                 </div>

@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-google-border pb-10">
           
-          {/* Brand Info */}
+          {/* Brand Info with Larger Logos */}
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center space-x-4">
-              <div className="relative h-10 w-44">
+              <div className="relative h-14 w-60">
                 <Image
                   src="/images/gdg-logo.jpeg"
                   alt="GDG FIEM Logo"
@@ -19,8 +19,8 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <div className="h-6 w-[1px] bg-google-border" />
-              <div className="relative h-8 w-28">
+              <div className="h-8 w-[1.5px] bg-google-border" />
+              <div className="relative h-12 w-40">
                 <Image
                   src="/images/fiem-logo.jpeg"
                   alt="FIEM Logo"
